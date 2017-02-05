@@ -1,3 +1,3 @@
-# Javascript Project Template
+# Leetcode Solutions v4
 
-This is a javascript project template with batteries included to speed up project initiation.
+This is Bob's [Leetcode](https://leetcode.com) solutions v4.
