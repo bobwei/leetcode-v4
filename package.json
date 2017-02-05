@@ -20,5 +20,7 @@
     "eslint-plugin-react": "^6.9.0",
     "jest": "^18.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ramda": "^0.23.0"
+  }
 }
