@@ -5,9 +5,11 @@
   "extends": "airbnb",
   "env": {
     "es6": true,
-    "node": true
+    "node": true,
+    "jest": true,
   },
   "rules": {
-    "no-console": 0
+    "no-console": 0,
+    "no-plusplus": 0
   }
 }
