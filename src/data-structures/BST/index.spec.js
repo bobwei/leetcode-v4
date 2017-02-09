@@ -11,3 +11,10 @@ it('can do inOrder traversal', () => {
   bst.insert(1, 2, 3, 7, 5, 4, 6);
   expect(bst.inOrder()).toEqual([1, 2, 3, 4, 5, 6, 7]);
 });
+
+it('can findMin and findMax', () => {
+  const bst = new BST();
+  bst.insert(1, 2, 3, 7, 5, 4, 6);
+  expect(bst.findMin()).toBe(1);
+  expect(bst.findMax()).toBe(7);
+});

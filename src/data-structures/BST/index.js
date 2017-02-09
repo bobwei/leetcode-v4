@@ -46,4 +46,20 @@ export default class BST {
     }
     return output;
   }
+
+  findMin() {
+    let ptr = this.root;
+    while (ptr.left) {
+      ptr = ptr.left;
+    }
+    return ptr.val;
+  }
+
+  findMax() {
+    let ptr = this.root;
+    while (ptr.right) {
+      ptr = ptr.right;
+    }
+    return ptr.val;
+  }
 }
