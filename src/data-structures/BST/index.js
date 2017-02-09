@@ -29,4 +29,21 @@ export default class BST {
     }
     return root;
   }
+
+  inOrder() {
+    const output = [];
+    const stack = [];
+    let ptr = this.root;
+    while (ptr || stack.length) {
+      if (ptr) {
+        stack.push(ptr);
+        ptr = ptr.left;
+      } else {
+        const node = stack.pop();
+        output.push(node.val);
+        ptr = node.right;
+      }
+    }
+    return output;
+  }
 }
