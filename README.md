@@ -7,3 +7,4 @@ This is Bob's [Leetcode](https://leetcode.com) solutions v4 in Javascript.
 References:
 - [https://skyyen999.gitbooks.io/-leetcode-with-javascript/content/questions/205md.html](https://skyyen999.gitbooks.io/-leetcode-with-javascript/content/questions/205md.html)
 - [http://www.sanfoundry.com/java-program-implement-binary-search-tree/](http://www.sanfoundry.com/java-program-implement-binary-search-tree/)
+- [https://github.com/mljs/tree-set/blob/master/src/index.js](https://github.com/mljs/tree-set/blob/master/src/index.js)
