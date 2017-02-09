@@ -47,19 +47,49 @@ export default class BST {
     return output;
   }
 
-  findMin() {
-    let ptr = this.root;
-    while (ptr.left) {
-      ptr = ptr.left;
-    }
-    return ptr.val;
+  delete(...keys) {
+    keys.forEach((key) => {
+      this.root = this.deleteRecursively(this.root, key);
+    });
+    return this;
   }
 
-  findMax() {
-    let ptr = this.root;
-    while (ptr.right) {
-      ptr = ptr.right;
+  deleteRecursively(root, key) {
+    if (!root) {
+      return root;
     }
-    return ptr.val;
+    if (key === root.val) {
+      if (!root.left && !root.right) {
+        return null;
+      } else if (!root.left) {
+        return root.right;
+      } else if (!root.right) {
+        return root.left;
+      } else {
+        const min = this.findMin(root.right);
+        root.val = min;
+        root.right = this.deleteRecursively(root.right, min);
+        return root;
+      }
+    } else if (key < root.val) {
+      root.left = this.deleteRecursively(root.left, key);
+    } else if (key > root.val) {
+      root.right = this.deleteRecursively(root.right, key);
+    }
+    return root;
+  }
+
+  findMin(root = this.root) {
+    while (root.left) {
+      root = root.left;
+    }
+    return root.val;
+  }
+
+  findMax(root = this.root) {
+    while (root.right) {
+      root = root.right;
+    }
+    return root.val;
   }
 }
